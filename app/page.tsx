@@ -1,5 +1,5 @@
 "use client";
-import { Calendar, Play, ExternalLink, Mail, Linkedin, Building2 } from "lucide-react"
+import { Calendar, Play, ExternalLink, Mail, Linkedin, Building2, Github, Twitter, Facebook, Instagram, Speech, Youtube } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@pf/components/ui/button"
@@ -27,6 +27,56 @@ const FEATURED_TALKS = [
     link: "https://www.youtube.com/watch?v=bgEJ3RKSPcs",
     thumbnail: `https://img.youtube.com/vi/bgEJ3RKSPcs/0.jpg`,
     readMore: "https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-",
+  },
+]
+
+const SOCIAL_LINKS = [
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/martin-kri%C5%A1tof-b6b78177/",
+    color: "hover:text-[#0A66C2]",
+  },
+  {
+    name: "GitHub",
+    icon: Github,
+    href: "https://github.com/MartinKristof",
+    color: "hover:text-[#181717]",
+  },
+  {
+    name: "X (Twitter)",
+    icon: Twitter,
+    href: "https://x.com/MartasKristof",
+    color: "hover:text-[#000000]",
+  },
+  {
+    name: "Facebook",
+    icon: Facebook,
+    href: "https://www.facebook.com/martas.kristof",
+    color: "hover:text-[#1877F2]",
+  },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://www.instagram.com/martas.kristof/",
+    color: "hover:text-[#E4405F]",
+  }, {
+    name: "Youtube",
+    icon: Youtube,
+    href: "https://www.youtube.com/@martinkristof4804",
+    color: "hover:text-[#E4405F]",
+  },
+  {
+    name: "Meetup",
+    icon: Speech,
+    href: "https://www.meetup.com/members/207123401/",
+    color: "hover:text-[#E4405F]",
+  },
+  {
+    name: "Email",
+    icon: Mail,
+    href: "mailto:me@kristofmartin.eu",
+    color: "hover:text-primary",
   },
 ]
 
@@ -198,6 +248,29 @@ const Page = () => (
       </div>
     </div>
   </section>
+
+  <section className="px-4 py-16">
+    <div className="mx-auto max-w-6xl animate-fade-in">
+            <h2 className="text-3xl font-bold mb-8">Find me on social media</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 grid-rows-2 gap-4 max-w-3xl mx-auto">
+              {SOCIAL_LINKS.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex flex-col items-center p-4 rounded-lg hover:bg-muted transition-colors ${link.color} group`}
+                >
+                  <link.icon className="h-6 w-6 mb-2 transition-colors" />
+                  <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                    {link.name}
+                  </span>
+                </Link>
+              ))}
+          </div>
+    </div>
+  </section>
+
   {/* Speaking Section */}
   <section className="px-4 py-16 bg-muted/50">
         <div className="mx-auto max-w-6xl">
@@ -284,7 +357,7 @@ const Page = () => (
             </div>
           </div>
         </div>
-      </section>
+  </section>
   {/* Courses Section - Updated with thumbnails */}
   <section className="px-4 py-16">
     <div className="mx-auto max-w-6xl">
@@ -451,6 +524,12 @@ const Page = () => (
            <Link href="https://www.linkedin.com/in/martin-kri%C5%A1tof-b6b78177/" target="_blank">
              <Linkedin className="mr-2 h-4 w-4" />
              Connect on LinkedIn
+           </Link>
+         </Button>
+         <Button asChild size="lg" variant="outline">
+           <Link href="https://github.com/MartinKristof" target="_blank">
+             <Github className="mr-2 h-4 w-4" />
+             Visit GitHub
            </Link>
          </Button>
        </div>
