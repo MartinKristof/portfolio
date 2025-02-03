@@ -21,9 +21,8 @@ const FEATURED_TALKS = [
     thumbnail: `https://img.youtube.com/vi/yCIvkpvJuqQ/0.jpg`,
   },
   {
-    year: "2024",
     title: "Performance Measurement of Micro-frontends in CI/CD via SpeedCurve",
-    event: "Frontkon",
+    event: "Frontkon 24",
     link: "https://www.youtube.com/watch?v=bgEJ3RKSPcs",
     thumbnail: `https://img.youtube.com/vi/bgEJ3RKSPcs/0.jpg`,
     readMore: "https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-",
