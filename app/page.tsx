@@ -1,4 +1,3 @@
-"use client";
 import { Calendar, Play, ExternalLink, Mail, Linkedin, Building2, Github, Twitter, Facebook, Instagram, Speech, Youtube } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -12,19 +11,19 @@ const FEATURED_TALKS = [
     title: "React Compiler in action",
     event: "MeetUpdate 2024",
     link: "https://www.youtube.com/watch?v=Q_C6WzpKav8",
-    thumbnail: `https://img.youtube.com/vi/Q_C6WzpKav8/0.jpg`,
+    thumbnail: "https://img.youtube.com/vi/Q_C6WzpKav8/0.jpg",
   },
   {
     title: "React Premature Optimization",
     event: "MeetUpdate 2024",
     link: "https://www.youtube.com/watch?v=yCIvkpvJuqQ",
-    thumbnail: `https://img.youtube.com/vi/yCIvkpvJuqQ/0.jpg`,
+    thumbnail: "https://img.youtube.com/vi/yCIvkpvJuqQ/0.jpg",
   },
   {
     title: "Performance Measurement of Micro-frontends in CI/CD via SpeedCurve",
     event: "Frontkon 24",
     link: "https://www.youtube.com/watch?v=bgEJ3RKSPcs",
-    thumbnail: `https://img.youtube.com/vi/bgEJ3RKSPcs/0.jpg`,
+    thumbnail: "https://img.youtube.com/vi/bgEJ3RKSPcs/0.jpg",
     readMore: "https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-",
   },
 ]
@@ -143,19 +142,19 @@ const SKILLMEA_COURSES = [
   {
     title: "React 19 for Beginners",
     link: "https://skillmea.cz/online-kurzy/react-pro-zacatecniky",
-    thumbnail: `https://img.youtube.com/vi/bgzvAjhKsbM/0.jpg`,
+    thumbnail: "https://img.youtube.com/vi/bgzvAjhKsbM/0.jpg",
     description: "Start your journey with React 19",
   },
   {
     title: "React 19 for Intermediate",
     link: "https://skillmea.cz/online-kurzy/react-pro-mirne-pokrocile",
-    thumbnail: `https://img.youtube.com/vi/CCNQYYHLYds/0.jpg`,
+    thumbnail: "https://img.youtube.com/vi/CCNQYYHLYds/0.jpg",
     description: "Level up your React skills",
   },
   {
     title: "React 19: Deep Dives",
     link: "https://skillmea.cz/online-kurzy/react-deep-dives",
-    thumbnail: `https://img.youtube.com/vi/J0Xa0_pm2aQ/0.jpg`,
+    thumbnail: "https://img.youtube.com/vi/J0Xa0_pm2aQ/0.jpg",
     description: "Master advanced React concepts",
   },
 ]
