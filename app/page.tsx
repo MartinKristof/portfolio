@@ -177,18 +177,25 @@ const SKILLMEA_COURSES = [
 
 const WORK_EXPERIENCE = [
   {
-    title: 'Frontend Developer',
+    title: 'Dev Team Lead',
     company: 'Heureka Group a.s.',
     period: 'Jul 2022 - Present',
-    description: 'Leading frontend development initiatives and mentoring team members',
+    description: 'Leading team Road To Product',
     current: true,
   },
   {
-    title: 'Frontend Developer',
+    title: 'Front-end Leader',
+    company: 'Heureka Group a.s.',
+    period: 'Jul 2020 - Jan 2025',
+    description:
+      'Leading front-end guild',
+  },
+  {
+    title: 'Front-end Developer',
     company: 'Heureka Group a.s.',
     period: 'Jul 2020 - Jul 2022',
     description:
-      'Developed the main micro-frontends on the website (Category, SERP, Homepage, Navigation, Footer) written in React.js and Node.js',
+      'Developed the main micro-front-ends on the website (Category, SERP, Homepage, Navigation, Footer) written in React.js and Node.js',
   },
   {
     title: 'Lecturer',
@@ -204,7 +211,7 @@ const WORK_EXPERIENCE = [
     description: 'For Arnold Robot project',
   },
   {
-    title: 'Frontend Developer',
+    title: 'Front-end Developer',
     company: 'LMC s.r.o.',
     period: 'Aug 2017 - Dec 2019',
     description: 'Developed Seduo.cz',
