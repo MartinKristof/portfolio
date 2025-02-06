@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import type React from 'react'; // Added import for React
 
-export function BlockReveal({
+export const BlockReveal = ({
   children,
   color = 'bg-primary',
   delay = 0,
@@ -12,7 +12,7 @@ export function BlockReveal({
   children: React.ReactNode;
   color?: string;
   delay?: number;
-}) {
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -34,4 +34,4 @@ export function BlockReveal({
       {children}
     </motion.div>
   );
-}
+};

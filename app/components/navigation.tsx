@@ -7,7 +7,7 @@ import { cn } from '@pf/lib/utils';
 const NAVIGATION_ITEMS = [
   { label: 'About', href: '#about' },
   { label: 'Social', href: '#social' },
-  { label: 'Speaking', href: '#speaking' },
+  { label: 'Talks', href: '#talks' },
   { label: 'Courses', href: '#courses' },
   { label: 'Teaching', href: '#teaching' },
   { label: 'Writing', href: '#writing' },

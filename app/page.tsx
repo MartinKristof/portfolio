@@ -6,11 +6,11 @@ import {
   Linkedin,
   Building2,
   Github,
-  Twitter,
   Facebook,
   Instagram,
   Speech,
   Youtube,
+  X,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,7 +21,7 @@ import { Navigation } from './components/navigation';
 import { Footer } from './components/footer';
 import { TalksGallery } from './components/talks-gallery';
 
-const FEATURED_TALKS = [
+const RECENT_TALKS = [
   {
     title: 'React Compiler in action',
     event: 'MeetUpdate 2024',
@@ -58,7 +58,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: 'X (Twitter)',
-    icon: Twitter,
+    icon: X,
     href: 'https://x.com/MartasKristof',
     color: 'hover:text-[#000000]',
   },
@@ -175,6 +175,29 @@ const SKILLMEA_COURSES = [
   },
 ];
 
+const BLOG_POSTS = [
+  {
+    title: 'Hackathons for OneUI',
+    source: '<HeurekaDevs />',
+    description: 'An in-depth look at improving UI libraries through focused hackathons.',
+    link: 'https://www.heurekadevs.cz/hackat-on-vymazlujeme-ui-knihovnu',
+  },
+  {
+    title: 'Martin Krištof at FrontKon 2024 about measuring the performance of micro frontends',
+    source: '<HeurekaDevs />',
+    description:
+      'This year FrontKon was packed. More than four dozen speakers took turns in three lecture halls, and Martin Krištof was among them.',
+    link: 'https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-',
+  },
+  {
+    title: 'Visual regression tests',
+    source: '<HeurekaDevs />',
+    description:
+      'Our frontend developer Martin Krištof summarized what visual regression tests are for and why we decided to use them at Heureka Group.',
+    link: 'https://www.heurekadevs.cz/vizualni-regresivni-testy',
+  },
+];
+
 const WORK_EXPERIENCE = [
   {
     title: 'Dev Team Lead',
@@ -187,8 +210,7 @@ const WORK_EXPERIENCE = [
     title: 'Front-end Leader',
     company: 'Heureka Group a.s.',
     period: 'Jul 2020 - Jan 2025',
-    description:
-      'Leading front-end guild',
+    description: 'Leading front-end guild',
   },
   {
     title: 'Front-end Developer',
@@ -205,13 +227,13 @@ const WORK_EXPERIENCE = [
     current: true,
   },
   {
-    title: 'Team Lead',
+    title: 'Team Lead & Front-end Leader',
     company: 'LMC s.r.o.',
     period: 'Dec 2019 - Jun 2020',
     description: 'For Arnold Robot project',
   },
   {
-    title: 'Front-end Developer',
+    title: 'Front-end Developer & Front-end Leader',
     company: 'LMC s.r.o.',
     period: 'Aug 2017 - Dec 2019',
     description: 'Developed Seduo.cz',
@@ -289,8 +311,8 @@ const Page = () => (
         </div>
       </section>
 
-      {/* Speaking Section */}
-      <section id="speaking" className="px-4 py-16 bg-muted/50">
+      {/* Talks Section */}
+      <section id="talks" className="px-4 py-16 bg-muted/50">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold mb-8 animate-fade-in">Conference Talks</h2>
           <div className="grid gap-6">
@@ -314,7 +336,7 @@ const Page = () => (
             </Card>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {FEATURED_TALKS.map((talk, index) => (
+              {RECENT_TALKS.map((talk, index) => (
                 <Card
                   key={index}
                   className="hover:shadow-lg transition-shadow duration-300 animate-slide-up"
@@ -366,6 +388,7 @@ const Page = () => (
                       <Link
                         href={talk.link}
                         className="text-sm text-primary hover:underline inline-flex items-center gap-1"
+                        target="_blank"
                       >
                         View Details
                         <ExternalLink className="w-3 h-3" />
@@ -403,7 +426,11 @@ const Page = () => (
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
                   <p className="text-muted-foreground mb-4">{course.description}</p>
-                  <Link href={course.link} className="inline-flex items-center text-primary hover:underline">
+                  <Link
+                    href={course.link}
+                    className="inline-flex items-center text-primary hover:underline"
+                    target="_blank"
+                  >
                     View Course
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
@@ -413,7 +440,7 @@ const Page = () => (
           </div>
           <div className="text-center mt-8">
             <Button asChild variant="outline">
-              <Link href="https://skillmea.cz/kanaly/martas-kristof">
+              <Link href="https://skillmea.cz/kanaly/martas-kristof" target="_blank">
                 View All Courses
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Link>
@@ -423,7 +450,7 @@ const Page = () => (
       </section>
 
       {/* Teaching Section */}
-      <section id="teaching" className="px-4 py-16">
+      <section id="teaching" className="px-4 py-16 bg-muted/50">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold mb-8 animate-fade-in">Teaching & Training</h2>
           <div className="grid gap-8 md:grid-cols-2 animate-slide-up">
@@ -470,23 +497,31 @@ const Page = () => (
       </section>
 
       {/* Blog Posts Section */}
-      <section id="writing" className="px-4 py-16 bg-muted/50">
+      <section id="writing" className="px-4 py-16">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold mb-8 animate-fade-in">Writing</h2>
-          <Card className="hover:shadow-lg transition-shadow duration-300 animate-slide-up">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Hackathons for OneUI</h3>
-              <p className="text-muted-foreground mb-4">
-                An in-depth look at improving UI libraries through focused hackathons.
-              </p>
-              <Link
-                href="https://www.heurekadevs.cz/hackat-on-vymazlujeme-ui-knihovnu"
-                className="text-primary hover:underline"
-              >
-                Read Article →
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {BLOG_POSTS.map((post, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 animate-slide-up">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4">{post.title}</h3>
+                  <h4 className="text-l font-semibold mb-4">{post.source}</h4>
+                  <p className="text-muted-foreground mb-4">{post.description}</p>
+                  <Link href={post.link} className="text-primary hover:underline">
+                    Read Article →
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild variant="outline">
+              <Link href="https://www.heurekadevs.cz/martin-kristof" target="_blank">
+                View All Articles on HeurekaDevs
+                <ExternalLink className="ml-2 h-4 w-4" />
               </Link>
-            </CardContent>
-          </Card>
+            </Button>
+          </div>
         </div>
       </section>
 
