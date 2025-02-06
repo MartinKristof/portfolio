@@ -1,9 +1,10 @@
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/next';
 import type React from 'react';
 import { Inter } from 'next/font/google';
 import { cn } from '@pf/lib/utils';
 import '@pf/app/styles/globals.css';
+import { CookieConsentProvider } from '@pf/contexts/cookie-consent-context';
+import { CookieConsentDialog } from '@pf/components/cookie-consent-dialog';
+import { AnalyticsInjector } from './components/analytics-injector';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,9 +17,11 @@ export const metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <body className={cn(inter.className, 'min-h-screen bg-background antialiased')}>
-      {children}
-      <SpeedInsights />
-      <Analytics />
+      <CookieConsentProvider>
+        {children}
+        <CookieConsentDialog />
+        <AnalyticsInjector />
+      </CookieConsentProvider>
     </body>
   </html>
 );
