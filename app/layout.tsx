@@ -16,6 +16,7 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
+    <meta name="robots" content="index,follow" />
     <body className={cn(inter.className, 'min-h-screen bg-background antialiased')}>
       <CookieConsentProvider>
         {children}
