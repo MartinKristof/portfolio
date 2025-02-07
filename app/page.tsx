@@ -23,7 +23,7 @@ import { TalksGallery } from './components/talks-gallery';
 
 const RECENT_TALKS = [
   {
-    title: 'React Compiler in action',
+    title: 'React Compiler in Action',
     event: 'MeetUpdate 2024',
     link: 'https://www.youtube.com/watch?v=Q_C6WzpKav8',
     thumbnail: 'https://img.youtube.com/vi/Q_C6WzpKav8/0.jpg',
@@ -36,7 +36,7 @@ const RECENT_TALKS = [
   },
   {
     title: 'Performance Measurement of Micro-frontends in CI/CD via SpeedCurve',
-    event: 'Frontkon 24',
+    event: 'FrontKon 24',
     link: 'https://www.youtube.com/watch?v=bgEJ3RKSPcs',
     thumbnail: 'https://img.youtube.com/vi/bgEJ3RKSPcs/0.jpg',
     readMore: 'https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-',
@@ -103,8 +103,8 @@ const PAST_TALKS = [
   },
   {
     year: '2023',
-    title: 'How to use the power of cooperation?',
-    event: 'Frontkon + Frontendisti',
+    title: 'How to Use the Power of Cooperation?',
+    event: 'FrontKon + Frontendisti',
     link: 'https://www.heurekadevs.cz/martin-kristof-pro-frontendisty-jak-vyuzit-silu-spolecne-prace',
   },
   {
@@ -131,7 +131,7 @@ const PAST_TALKS = [
   {
     year: '2021',
     title: 'React Premature Optimization',
-    event: 'Frontkon',
+    event: 'FrontKon',
     link: 'https://www.heurekadevs.cz/jak-se-vyhnout-predcasne-optimalizaci-v-reactu',
   },
   {
@@ -143,13 +143,13 @@ const PAST_TALKS = [
   {
     year: '2018',
     title: 'Next.js and UI Library',
-    event: 'Conference',
+    event: 'Frontendisti',
     link: 'https://www.youtube.com/watch?v=-lyxi-cHbY8',
   },
   {
     year: '2016',
     title: 'Jobs UI',
-    event: 'Conference',
+    event: 'Frontendisti',
     link: 'https://www.youtube.com/watch?app=desktop&v=8nVoafsc0PQ',
   },
 ];
@@ -183,14 +183,14 @@ const BLOG_POSTS = [
     link: 'https://www.heurekadevs.cz/hackat-on-vymazlujeme-ui-knihovnu',
   },
   {
-    title: 'Martin Krištof at FrontKon 2024 about measuring the performance of micro frontends',
+    title: 'Martin Krištof at FrontKon 2024 about Measuring the Performance of Micro-frontends',
     source: '<HeurekaDevs />',
     description:
       'This year FrontKon was packed. More than four dozen speakers took turns in three lecture halls, and Martin Krištof was among them.',
     link: 'https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-',
   },
   {
-    title: 'Visual regression tests',
+    title: 'Visual Regression Testing',
     source: '<HeurekaDevs />',
     description:
       'Our frontend developer Martin Krištof summarized what visual regression tests are for and why we decided to use them at Heureka Group.',
