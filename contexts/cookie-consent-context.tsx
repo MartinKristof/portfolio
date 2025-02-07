@@ -5,7 +5,6 @@ import * as React from 'react';
 type CookieConsent = {
   necessary: boolean;
   analytics: boolean;
-  marketing: boolean;
 };
 
 type CookieConsentContextType = {

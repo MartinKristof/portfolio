@@ -291,7 +291,7 @@ const Page = () => (
 
       <section id="social" className="px-4 py-16">
         <div className="mx-auto max-w-6xl animate-fade-in">
-          <h2 className="text-3xl font-bold mb-8">Find me on social media</h2>
+          <h2 className="text-3xl font-bold mb-8">Find Me on Social Media</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 grid-rows-2 gap-4 max-w-3xl mx-auto">
             {SOCIAL_LINKS.map(link => (
               <Link

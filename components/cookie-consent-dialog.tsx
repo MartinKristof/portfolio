@@ -23,9 +23,8 @@ export const CookieConsentDialog = () => {
   const [preferences, setPreferences] = React.useState({
     necessary: true,
     analytics: false,
-    marketing: false,
   });
-  const hasAnyConsent = consent?.necessary || consent?.analytics || consent?.marketing;
+  const hasAnyConsent = consent?.necessary || consent?.analytics;
 
   React.useEffect(() => {
     if (consent) {
@@ -93,7 +92,6 @@ export const CookieConsentDialog = () => {
                 updateConsent({
                   necessary: true,
                   analytics: false,
-                  marketing: false,
                 });
               }}
             >
@@ -104,7 +102,6 @@ export const CookieConsentDialog = () => {
                 updateConsent({
                   necessary: true,
                   analytics: true,
-                  marketing: true,
                 });
               }}
             >
@@ -128,12 +125,11 @@ const CookieOptions = ({
   preferences,
   setPreferences,
 }: {
-  preferences: { necessary: boolean; analytics: boolean; marketing: boolean };
+  preferences: { necessary: boolean; analytics: boolean };
   setPreferences: React.Dispatch<
     React.SetStateAction<{
       necessary: boolean;
       analytics: boolean;
-      marketing: boolean;
     }>
   >;
 }) => (
@@ -158,19 +154,6 @@ const CookieOptions = ({
         id="analytics"
         checked={preferences.analytics}
         onCheckedChange={checked => setPreferences(prev => ({ ...prev, analytics: checked }))}
-      />
-    </div>
-    <div className="flex items-center justify-between space-x-2">
-      <Label htmlFor="marketing" className="flex flex-col space-y-1">
-        <span>Marketing Cookies</span>
-        <span className="font-normal text-sm text-muted-foreground">
-          Used to track visitors across websites to display relevant advertisements.
-        </span>
-      </Label>
-      <Switch
-        id="marketing"
-        checked={preferences.marketing}
-        onCheckedChange={checked => setPreferences(prev => ({ ...prev, marketing: checked }))}
       />
     </div>
   </div>
