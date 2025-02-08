@@ -27,19 +27,21 @@ const RECENT_TALKS = [
     event: 'MeetUpdate 2024',
     link: 'https://www.youtube.com/watch?v=Q_C6WzpKav8',
     thumbnail: 'https://img.youtube.com/vi/Q_C6WzpKav8/0.jpg',
+    readMore: '',
   },
   {
     title: 'React Premature Optimization',
     event: 'MeetUpdate 2024',
     link: 'https://www.youtube.com/watch?v=yCIvkpvJuqQ',
     thumbnail: 'https://img.youtube.com/vi/yCIvkpvJuqQ/0.jpg',
+    readMore: '',
   },
   {
-    title: 'Performance Measurement of Micro-frontends in CI/CD via SpeedCurve',
-    event: 'FrontKon 24',
-    link: 'https://www.youtube.com/watch?v=bgEJ3RKSPcs',
-    thumbnail: 'https://img.youtube.com/vi/bgEJ3RKSPcs/0.jpg',
-    readMore: 'https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-',
+    title: 'React Compiler: Game Changer?',
+    event: 'TechMeetup 2024',
+    link: 'https://www.youtube.com/watch?v=o1-rGxxWIV8',
+    thumbnail: 'https://img.youtube.com/vi/o1-rGxxWIV8/0.jpg',
+    readMore: '',
   },
 ];
 
@@ -97,9 +99,9 @@ const SOCIAL_LINKS = [
 const PAST_TALKS = [
   {
     year: '2024',
-    title: 'React Compiler: The Game Changer?',
-    event: 'TechMeetup',
-    link: 'https://www.linkedin.com/posts/martin-kri%C5%A1tof-b6b78177_reactcompiler-reactjs-activity-7255666369336111106-jB-H?utm_source=share&utm_medium=member_desktop',
+    title: 'Performance Measurement of Micro-frontends in CI/CD via SpeedCurve',
+    event: 'FrontKon 24',
+    link: 'https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-',
   },
   {
     year: '2023',
