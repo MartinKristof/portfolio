@@ -20,6 +20,7 @@ import { Badge } from '@pf/components/ui/badge';
 import { Navigation } from './components/navigation';
 import { Footer } from './components/footer';
 import { TalksGallery } from './components/talks-gallery';
+import { LanguageFlag } from './components/language-flag';
 
 const RECENT_TALKS = [
   {
@@ -28,6 +29,7 @@ const RECENT_TALKS = [
     link: 'https://www.youtube.com/watch?v=Q_C6WzpKav8',
     thumbnail: 'https://img.youtube.com/vi/Q_C6WzpKav8/0.jpg',
     readMore: '',
+    language: 'cs',
   },
   {
     title: 'React Premature Optimization',
@@ -35,6 +37,7 @@ const RECENT_TALKS = [
     link: 'https://www.youtube.com/watch?v=yCIvkpvJuqQ',
     thumbnail: 'https://img.youtube.com/vi/yCIvkpvJuqQ/0.jpg',
     readMore: '',
+    language: 'cs',
   },
   {
     title: 'React Compiler: Game Changer?',
@@ -42,6 +45,7 @@ const RECENT_TALKS = [
     link: 'https://www.youtube.com/watch?v=o1-rGxxWIV8',
     thumbnail: 'https://img.youtube.com/vi/o1-rGxxWIV8/0.jpg',
     readMore: '',
+    language: 'en',
   },
 ];
 
@@ -102,12 +106,14 @@ const PAST_TALKS = [
     title: 'Performance Measurement of Micro-frontends in CI/CD via SpeedCurve',
     event: 'FrontKon 24',
     link: 'https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-',
+    language: 'cs',
   },
   {
     year: '2023',
     title: 'How to Use the Power of Cooperation?',
     event: 'FrontKon + Frontendisti',
     link: 'https://www.heurekadevs.cz/martin-kristof-pro-frontendisty-jak-vyuzit-silu-spolecne-prace',
+    language: 'cs',
   },
   {
     year: '2023',
@@ -116,6 +122,7 @@ const PAST_TALKS = [
     link: 'https://www.youtube.com/watch?v=-8eolTM7HFc',
     readMore:
       'https://www.heurekadevs.cz/poznamky-z-konference-heureka-devs-vyrazili-na-techmeetup-konferenci-do-ostravy',
+    language: 'cs',
   },
   {
     year: '2022',
@@ -123,36 +130,42 @@ const PAST_TALKS = [
     event: 'WebExpo',
     link: 'https://slideslive.com/s/martin-kristof-107180?tab=presentations',
     description: 'QA with Robin Pokorný, QA with Břéťa Proft and Terka Vaňková',
+    language: 'en',
   },
   {
     year: '2022',
     title: 'Visual Regression Testing',
     event: 'Frontendisti',
     link: 'https://www.heurekadevs.cz/vizualni-regresivni-testy',
+    language: 'cs',
   },
   {
     year: '2021',
     title: 'React Premature Optimization',
     event: 'FrontKon',
     link: 'https://www.heurekadevs.cz/jak-se-vyhnout-predcasne-optimalizaci-v-reactu',
+    language: 'cs',
   },
   {
     year: '2020',
     title: 'Next.js',
     event: 'Vzhurudolu.cz podcast',
     link: 'https://www.vzhurudolu.cz/podcast/169-podcast-next-js',
+    language: 'cs',
   },
   {
     year: '2018',
     title: 'Next.js and UI Library',
     event: 'Frontendisti',
     link: 'https://www.youtube.com/watch?v=-lyxi-cHbY8',
+    language: 'cs',
   },
   {
     year: '2016',
     title: 'Jobs UI',
     event: 'Frontendisti',
     link: 'https://www.youtube.com/watch?app=desktop&v=8nVoafsc0PQ',
+    language: 'cs',
   },
 ];
 
@@ -162,18 +175,21 @@ const SKILLMEA_COURSES = [
     link: 'https://skillmea.cz/online-kurzy/react-pro-zacatecniky',
     thumbnail: 'https://img.youtube.com/vi/bgzvAjhKsbM/0.jpg',
     description: 'Start your journey with React 19',
+    language: 'cs',
   },
   {
     title: 'React 19 for Intermediate',
     link: 'https://skillmea.cz/online-kurzy/react-pro-mirne-pokrocile',
     thumbnail: 'https://img.youtube.com/vi/CCNQYYHLYds/0.jpg',
     description: 'Level up your React skills',
+    language: 'cs',
   },
   {
     title: 'React 19: Deep Dives',
     link: 'https://skillmea.cz/online-kurzy/react-deep-dives',
     thumbnail: 'https://img.youtube.com/vi/J0Xa0_pm2aQ/0.jpg',
     description: 'Master advanced React concepts',
+    language: 'cs',
   },
 ];
 
@@ -183,6 +199,7 @@ const BLOG_POSTS = [
     source: '<HeurekaDevs />',
     description: 'An in-depth look at improving UI libraries through focused hackathons.',
     link: 'https://www.heurekadevs.cz/hackat-on-vymazlujeme-ui-knihovnu',
+    language: 'cs',
   },
   {
     title: 'Martin Krištof at FrontKon 2024 about Measuring the Performance of Micro-frontends',
@@ -190,6 +207,7 @@ const BLOG_POSTS = [
     description:
       'This year FrontKon was packed. More than four dozen speakers took turns in three lecture halls, and Martin Krištof was among them.',
     link: 'https://www.heurekadevs.cz/martin-kristof-na-frontkon-2024-',
+    language: 'cs',
   },
   {
     title: 'Visual Regression Testing',
@@ -197,6 +215,7 @@ const BLOG_POSTS = [
     description:
       'Our frontend developer Martin Krištof summarized what visual regression tests are for and why we decided to use them at Heureka Group.',
     link: 'https://www.heurekadevs.cz/vizualni-regresivni-testy',
+    language: 'cs',
   },
 ];
 
@@ -324,7 +343,10 @@ const Page = () => (
                 <div className="flex items-start gap-4">
                   <Calendar className="w-5 h-5 mt-1 text-muted-foreground" />
                   <div>
-                    <h3 className="text-xl font-semibold">React Compiler in action! Workshop</h3>
+                    <h3 className="text-xl font-semibold flex items-start">
+                      React Compiler in action! Workshop
+                      <LanguageFlag language="en" />
+                    </h3>
                     <p className="text-muted-foreground">WebExpo 2025</p>
                     <Link
                       href="https://webexpo.net/prague2025/sessions/free-workshop-react-compiler-in-action/"
@@ -359,7 +381,10 @@ const Page = () => (
                         <span className="sr-only">Watch {talk.title}</span>
                       </Link>
                     </div>
-                    <h3 className="text-xl font-semibold">{talk.title}</h3>
+                    <h3 className="text-xl font-semibold flex items-start">
+                      {talk.title}
+                      <LanguageFlag language={talk.language} />
+                    </h3>
                     <p className="text-muted-foreground">{talk.event}</p>
                     {talk.readMore && (
                       <Link href={talk.readMore} className="text-primary hover:underline mt-2 block">
@@ -384,7 +409,10 @@ const Page = () => (
                   >
                     <Badge variant="outline">{talk.year}</Badge>
                     <div>
-                      <h4 className="font-medium">{talk.title}</h4>
+                      <h4 className="font-medium flex items-start">
+                        {talk.title}
+                        <LanguageFlag language={talk.language} />
+                      </h4>
                       <p className="text-sm text-muted-foreground">{talk.event}</p>
                       {talk.description && <p className="text-sm text-muted-foreground">{talk.description}</p>}
                       <Link
@@ -426,7 +454,10 @@ const Page = () => (
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 flex items-start">
+                    {course.title}
+                    <LanguageFlag language={course.language} />
+                  </h3>
                   <p className="text-muted-foreground mb-4">{course.description}</p>
                   <Link
                     href={course.link}
@@ -506,7 +537,10 @@ const Page = () => (
             {BLOG_POSTS.map((post, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300 animate-slide-up">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">{post.title}</h3>
+                  <h3 className="text-xl font-semibold mb-4 flex items-start">
+                    {post.title}
+                    <LanguageFlag language={post.language} />
+                  </h3>
                   <h4 className="text-l font-semibold mb-4">{post.source}</h4>
                   <p className="text-muted-foreground mb-4">{post.description}</p>
                   <Link href={post.link} className="text-primary hover:underline">
