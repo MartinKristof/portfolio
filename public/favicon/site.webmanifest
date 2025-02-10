@@ -1,6 +1,8 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Martin Krištof - React Expert",
+  "short_name": "Martin Krištof",
+  "description": "React expert, conference speaker, and technical trainer specializing in modern web development.",
+  "start_url": "/",
   "icons": [
     { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }

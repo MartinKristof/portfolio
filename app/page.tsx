@@ -228,6 +228,13 @@ const WORK_EXPERIENCE = [
     current: true,
   },
   {
+    title: 'Lecturer',
+    company: 'Skillmea',
+    period: 'March 2024 - Present',
+    description: 'Video courses for React.js.',
+    current: true,
+  },
+  {
     title: 'Front-end Leader',
     company: 'Heureka Group a.s.',
     period: 'Jul 2020 - Jan 2025',
