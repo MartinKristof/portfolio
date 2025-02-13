@@ -117,9 +117,9 @@ const PAST_TALKS = [
   },
   {
     year: '2023',
-    title: 'Next.js 14 + Server Actions',
+    title: 'Next.js 14 + Server Actions - remastered',
     event: 'TechMeetup 2023',
-    link: 'https://www.youtube.com/watch?v=-8eolTM7HFc',
+    link: 'https://www.youtube.com/watch?v=AUziV75JRCo',
     readMore:
       'https://www.heurekadevs.cz/poznamky-z-konference-heureka-devs-vyrazili-na-techmeetup-konferenci-do-ostravy',
     language: 'cs',
